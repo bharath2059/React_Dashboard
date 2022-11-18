@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function Dashboard() {
     const [error, setError] = useState("")
-    const { currentUser, logout } = useAuth()
+    const { logout } = useAuth()
     const navigate = useNavigate()
 
     async function handleLogout() {
@@ -25,7 +25,8 @@ export default function Dashboard() {
                 <Card.Body>
                     <h2 className="text-center mb-4">Profile</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
-                    <strong>Email:</strong> {currentUser.email}
+
+
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
